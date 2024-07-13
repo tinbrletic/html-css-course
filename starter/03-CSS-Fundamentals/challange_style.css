@@ -1,0 +1,10 @@
+body {
+  border: solid 5px black;
+  font-family: sans-serif;
+}
+
+h2 {
+  background-color: #f7f7f7;
+  text-align: center;
+  text-transform: uppercase;
+}
