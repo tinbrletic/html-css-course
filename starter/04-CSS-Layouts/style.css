@@ -1,20 +1,19 @@
 * {
-  /* border-top: 10px solid #1098ad; */
   margin: 0;
   padding: 0;
 }
 
-/* PAGE SECTIONS */
+/* PAGE SECTION */
 body {
   color: #444;
   font-family: sans-serif;
+  border-top: solid 10px #1098ad;
 
-  border-top: 10px solid #1098ad;
   position: relative;
 }
 
 .container {
-  width: 800px;
+  width: 1200px;
   /* margin-left: auto;
   margin-right: auto; */
   margin: 0 auto;
@@ -32,7 +31,8 @@ body {
 
 nav {
   font-size: 18px;
-  /* text-align: center; */
+
+  text-align: center;
 }
 
 article {
@@ -41,6 +41,7 @@ article {
 
 .post-header {
   margin-bottom: 40px;
+
   /* position: relative; */
 }
 
@@ -54,7 +55,6 @@ aside {
   width: 500px;
 }
 
-/* SMALLER ELEMENTS */
 h1,
 h2,
 h3 {
@@ -99,6 +99,7 @@ ol {
 li {
   font-size: 20px;
   margin-bottom: 10px;
+
   /* display: inline; */
 }
 
@@ -128,19 +129,11 @@ li:last-child {
   font-weight: bold;
 }
 
-/* ul {
-  list-style: none;
-} */
-
 .related {
   list-style: none;
 }
 
-body {
-  /* background-color: orangered; */
-}
-
-/* .first-li {
+/* .first-li{
   font-weight: bold;
 } */
 
@@ -152,16 +145,13 @@ li:last-child {
   font-style: italic;
 }
 
-li:nth-child(even) {
-  /* color: red; */
-}
-
-/* Misconception: this won't work! */
+/* misconception - this won't work */
 article p:first-child {
   color: red;
 }
 
 /* Styling links */
+
 a:link {
   color: #1098ad;
   text-decoration: none;
@@ -175,7 +165,7 @@ a:visited {
 a:hover {
   color: orangered;
   font-weight: bold;
-  text-decoration: underline orangered;
+  text-decoration: underline;
 }
 
 a:active {
@@ -184,7 +174,7 @@ a:active {
 }
 /* LVHA */
 
-.post-img {
+.post-image {
   width: 100%;
   height: auto;
 }
@@ -198,6 +188,7 @@ nav a:link {
 
   margin-right: 30px;
   margin-top: 10px;
+
   display: inline-block;
 }
 
@@ -213,6 +204,7 @@ button {
   position: absolute;
   /* top: 50px;
   left: 50px; */
+
   bottom: 50px;
   right: 50px;
 }
@@ -222,30 +214,33 @@ h1::first-letter {
   margin-right: 5px;
 }
 
-h3 + p::first-line {
-  /* color: red; */
-}
+/* h3 + p::first-line {
+   color: red; 
+} */
 
 h2 {
   /* background-color: orange; */
   position: relative;
 }
 
-h2::before {
+h2::after {
   content: "TOP";
   background-color: #ffe70e;
   color: #444;
   font-size: 16px;
   font-weight: bold;
+
   display: inline-block;
   padding: 5px 10px;
+
   position: absolute;
   top: -10px;
   right: -25px;
 }
 
-/* Resolving conflicts */
-/* #copyright {
+/* Resolving conflict */
+/* 
+#copyright {
   color: red;
 }
 
@@ -261,7 +256,49 @@ footer p {
   color: green !important;
 } */
 
-/* nav a:link,
-nav p {
-  font-size: 18px;
-} */
+/* FLOATS */
+.author-img {
+  float: left;
+  margin-bottom: 20px;
+}
+
+.author {
+  float: left;
+  margin-top: 10px;
+  margin-left: 20px;
+}
+
+h1 {
+  float: left;
+}
+
+nav {
+  float: right;
+}
+
+.clear {
+  clear: both;
+}
+
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+article {
+  width: 825px;
+
+  float: left;
+}
+
+aside {
+  width: 300px;
+
+  float: right;
+}
+
+footer {
+  background-color: yellow;
+  clear: both;
+}
